@@ -98,6 +98,7 @@
 				TargetAttributes = {
 					63366A3A2263ADE9002FA4C2 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 0;
@@ -290,7 +291,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fISH.Coral;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -308,7 +309,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fISH.Coral;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
