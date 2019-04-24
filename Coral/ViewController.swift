@@ -23,6 +23,7 @@ class ViewController: NSViewController {
     }
     
     override func viewDidAppear() {
+        self.thumb_view.isHidden = true
         let document = self.view.window?.windowController?.document as! Document
         self.view.window?.title = document.displayName
         self.pdfview.document = document.pdfdoc
@@ -31,12 +32,23 @@ class ViewController: NSViewController {
         self.pdfview.backgroundColor = .init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
         self.pdfview.pageShadowsEnabled = true
         self.thumbs.pdfView = self.pdfview
-        self.thumb_view.isHidden = true
+        // to top lmao
+        self.pdfview.scrollToBeginningOfDocument(nil)
+
     }
-    
+
     override var representedObject: Any? {
         didSet {
         }
     }
+
+    @IBAction func testWindowMenuItemSelected(_ sender: Any) {
+        if self.thumb_view.isHidden == false {
+            self.thumb_view.isHidden = true
+        }else{
+            self.thumb_view.isHidden = false
+        }
+    }
+    
 }
 

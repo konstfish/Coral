@@ -604,6 +604,12 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="View" id="HyV-fh-RgO">
                                     <items>
+                                        <menuItem title="Hide Previews" keyEquivalent="H" id="nFX-JM-Wi4">
+                                            <connections>
+                                                <action selector="testWindowMenuItemSelected:" target="Ady-hI-5gd" id="D3q-aF-lI2"/>
+                                                <binding destination="cDy-wr-xHJ" name="value" keyPath="values.representedObject" id="4ed-Xb-0Gh"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem title="Show Toolbar" keyEquivalent="t" id="snW-S8-Cw5">
                                             <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                             <connections>
@@ -654,13 +660,6 @@
                                                 <action selector="arrangeInFront:" target="Ady-hI-5gd" id="DRN-fu-gQh"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="test" id="nFX-JM-Wi4">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="itemTest:" target="Voe-Tx-rLC" id="6x6-mm-TPx"/>
-                                                <binding destination="cDy-wr-xHJ" name="value" keyPath="values.representedObject" id="4ed-Xb-0Gh"/>
-                                            </connections>
-                                        </menuItem>
                                     </items>
                                 </menu>
                             </menuItem>
@@ -685,6 +684,7 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Coral" customModuleProvider="target">
                     <connections>
                         <outlet property="test" destination="nFX-JM-Wi4" id="sQm-kD-3Dl"/>
+                        <outlet property="testWindowMenuItem" destination="nFX-JM-Wi4" id="136-BI-1JH"/>
                     </connections>
                 </customObject>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -726,12 +726,12 @@
                             <splitView arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cp1-3R-o4q">
                                 <rect key="frame" x="0.0" y="0.0" width="625" height="720"/>
                                 <subviews>
-                                    <customView id="QHE-Rh-Vix">
-                                        <rect key="frame" x="0.0" y="0.0" width="103" height="720"/>
+                                    <customView hidden="YES" id="QHE-Rh-Vix">
+                                        <rect key="frame" x="0.0" y="0.0" width="106" height="720"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
-                                            <pdfThumbnailView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jGs-p4-mfV">
-                                                <rect key="frame" x="3" y="0.0" width="100" height="720"/>
+                                            <pdfThumbnailView wantsLayer="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jGs-p4-mfV">
+                                                <rect key="frame" x="0.0" y="0.0" width="72" height="720"/>
                                                 <size key="thumbnailSize" width="64" height="64"/>
                                             </pdfThumbnailView>
                                         </subviews>
@@ -739,15 +739,15 @@
                                             <constraint firstItem="jGs-p4-mfV" firstAttribute="top" secondItem="QHE-Rh-Vix" secondAttribute="top" id="EWz-5J-EYZ"/>
                                             <constraint firstAttribute="trailing" secondItem="jGs-p4-mfV" secondAttribute="trailing" id="Ebe-XM-ui5"/>
                                             <constraint firstAttribute="bottom" secondItem="jGs-p4-mfV" secondAttribute="bottom" id="YCX-AH-i80"/>
-                                            <constraint firstItem="jGs-p4-mfV" firstAttribute="leading" secondItem="QHE-Rh-Vix" secondAttribute="leading" constant="3" id="uc4-Fp-Gpf"/>
+                                            <constraint firstItem="jGs-p4-mfV" firstAttribute="leading" secondItem="QHE-Rh-Vix" secondAttribute="leading" id="uc4-Fp-Gpf"/>
                                         </constraints>
                                     </customView>
                                     <customView id="HyI-t9-gOh">
-                                        <rect key="frame" x="104" y="0.0" width="521" height="720"/>
+                                        <rect key="frame" x="1" y="0.0" width="624" height="720"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
-                                            <pdfView autoresizesSubviews="NO" wantsLayer="YES" acceptsDraggedFiles="YES" autoScales="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WDm-2T-E4w">
-                                                <rect key="frame" x="0.0" y="0.0" width="521" height="720"/>
+                                            <pdfView autoresizesSubviews="NO" wantsLayer="YES" misplaced="YES" acceptsDraggedFiles="YES" autoScales="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WDm-2T-E4w">
+                                                <rect key="frame" x="0.0" y="0.0" width="624" height="708"/>
                                             </pdfView>
                                         </subviews>
                                         <constraints>
