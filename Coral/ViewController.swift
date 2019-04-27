@@ -16,9 +16,10 @@ class ViewController: NSViewController {
     @IBOutlet var thumbs: PDFThumbnailView!
     @IBOutlet var thumb_view: NSView!
     
+    var titlebar = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
@@ -32,9 +33,7 @@ class ViewController: NSViewController {
         self.pdfview.backgroundColor = .init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
         self.pdfview.pageShadowsEnabled = true
         self.thumbs.pdfView = self.pdfview
-        // to top lmao
-        self.pdfview.scrollToBeginningOfDocument(nil)
-
+        self.pdfview.scrollToBeginningOfDocument(nil) // to top lmao
     }
 
     override var representedObject: Any? {
@@ -48,6 +47,15 @@ class ViewController: NSViewController {
         }else{
             self.thumb_view.isHidden = false
         }
+    }
+    
+    @IBAction func hideBarWindowMenuItemSelected(_ sender: Any) {
+        if titlebar {
+            self.view.window?.styleMask.remove(.titled)
+        }else{
+            self.view.window?.styleMask.insert(NSWindow.StyleMask.titled)
+        }
+        titlebar = !titlebar
     }
     
 }
