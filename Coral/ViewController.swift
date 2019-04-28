@@ -34,6 +34,9 @@ class ViewController: NSViewController {
         self.pdfview.pageShadowsEnabled = true
         self.thumbs.pdfView = self.pdfview
         self.pdfview.scrollToBeginningOfDocument(nil) // to top lmao
+        
+        let filename = document.fileURL!.absoluteString
+        print(filename)
     }
 
     override var representedObject: Any? {
@@ -56,6 +59,27 @@ class ViewController: NSViewController {
             self.view.window?.styleMask.insert(NSWindow.StyleMask.titled)
         }
         titlebar = !titlebar
+    }
+    
+    @IBAction func highlightTextWindowItemSelected(_ sender: Any) {
+        highlightText(c: NSColor.red)
+    }
+    
+    @IBAction func highlightPurpleTouchbarItemSelected(_ sender: Any) {
+        highlightText(c: NSColor.purple)
+    }
+    
+    func highlightText(c: NSColor) {
+        let selections = pdfview.currentSelection?.selectionsByLine()
+        guard let page = selections?.first?.pages.first else { return }
+        
+        selections?.forEach({ selection in
+            let highlight = PDFAnnotation(bounds: selection.bounds(for: page), forType: .highlight, withProperties: nil)
+            print(highlight.isHighlighted)
+            highlight.endLineStyle = .square
+            highlight.color = c.withAlphaComponent(0.5)
+            page.addAnnotation(highlight)
+        })
     }
     
 }
