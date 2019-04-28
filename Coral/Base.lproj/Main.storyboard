@@ -118,6 +118,12 @@
                                                 <action selector="print:" target="Ady-hI-5gd" id="qaZ-4w-aoO"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="hZB-DN-Sh6"/>
+                                        <menuItem title="Select Text" keyEquivalent="V" id="CBD-67-mXy">
+                                            <connections>
+                                                <action selector="highlightTextWindowItemSelected:" target="Ady-hI-5gd" id="EMG-N9-5AK"/>
+                                            </connections>
+                                        </menuItem>
                                     </items>
                                 </menu>
                             </menuItem>
@@ -713,102 +719,38 @@
                             <outlet property="delegate" destination="jGA-0Y-lOj" id="98r-iN-zZc"/>
                         </connections>
                     </window>
-                    <touchBar key="touchBar" id="2Ha-lB-m39">
+                    <touchBar key="touchBar" id="W0F-qu-l1M">
                         <touchBarItems>
-                            <colorPickerItem showsAlpha="NO" id="W1Q-Qd-7Nq"/>
-                            <touchBarGroupItem identifier="rainbow" id="HWB-V2-RSD">
-                                <touchBar key="groupTouchBar" id="M5l-uB-Ek1">
+                            <touchBarGroupItem id="YgL-bL-oxB">
+                                <touchBar key="groupTouchBar" id="nYY-i6-YOY">
                                     <touchBarItems>
-                                        <touchBarItem id="5mw-nA-bsN">
-                                            <viewController key="viewController" id="YB0-IN-JAO">
-                                                <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yWP-pb-S1f">
-                                                    <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
-                                                    <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hhd-LH-IXp">
+                                        <touchBarItem id="huS-nP-HgL">
+                                            <viewController key="viewController" id="n25-Gy-fZ0">
+                                                <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hmf-Za-utt">
+                                                    <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                                    <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="M1b-hB-F9d">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" usesAppearanceFont="YES"/>
                                                     </buttonCell>
-                                                    <color key="bezelColor" name="selectedMenuItemTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="bezelColor" name="systemPurpleColor" catalog="System" colorSpace="catalog"/>
+                                                    <connections>
+                                                        <action selector="highlightPurpleTouchbarItemSelected:" target="6f7-a7-6o1" id="DCP-Ip-2vd"/>
+                                                    </connections>
                                                 </button>
                                             </viewController>
-                                            <size key="designTimeSize" width="45" height="30"/>
+                                            <size key="designTimeSize" width="72" height="30"/>
                                         </touchBarItem>
-                                        <touchBarItem id="Omw-Bx-bxo">
-                                            <viewController key="viewController" id="4Nw-5R-dRE">
-                                                <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kw5-eL-6Sf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
-                                                    <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OYf-9n-SlW">
-                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                        <font key="font" usesAppearanceFont="YES"/>
-                                                    </buttonCell>
-                                                    <color key="bezelColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
-                                                </button>
-                                            </viewController>
-                                            <size key="designTimeSize" width="45" height="30"/>
-                                        </touchBarItem>
-                                        <touchBarItem id="Ppu-tp-12H">
-                                            <viewController key="viewController" id="kwL-Kr-7Fl">
-                                                <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="btM-Mz-JdJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
-                                                    <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Kel-PC-Wwu">
-                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                        <font key="font" usesAppearanceFont="YES"/>
-                                                    </buttonCell>
-                                                    <color key="bezelColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
-                                                </button>
-                                            </viewController>
-                                            <size key="designTimeSize" width="45" height="30"/>
-                                        </touchBarItem>
-                                        <touchBarItem id="S5Q-hf-hRW">
-                                            <viewController key="viewController" id="hd8-uq-LEG">
-                                                <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yvA-as-DBW">
-                                                    <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
-                                                    <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Kz9-Qf-frQ">
+                                        <touchBarItem id="JTJ-16-J2z">
+                                            <viewController key="viewController" id="ZVW-Ge-sAz">
+                                                <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mDZ-kc-1dH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                                    <buttonCell key="cell" type="push" bezelStyle="rounded" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="w8O-2L-AKM">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" usesAppearanceFont="YES"/>
                                                     </buttonCell>
                                                     <color key="bezelColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
                                                 </button>
                                             </viewController>
-                                            <size key="designTimeSize" width="45" height="30"/>
-                                        </touchBarItem>
-                                        <touchBarItem id="a4y-NL-Mah">
-                                            <viewController key="viewController" id="99e-Qe-nLf">
-                                                <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Gc-4J-5CN">
-                                                    <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
-                                                    <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mSS-Mf-5V7">
-                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                        <font key="font" usesAppearanceFont="YES"/>
-                                                    </buttonCell>
-                                                    <color key="bezelColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
-                                                </button>
-                                            </viewController>
-                                            <size key="designTimeSize" width="45" height="30"/>
-                                        </touchBarItem>
-                                        <touchBarItem id="DfE-9G-QAH">
-                                            <viewController key="viewController" id="jGO-Um-bHo">
-                                                <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WDy-if-H4F">
-                                                    <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
-                                                    <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="skF-0l-N1Y">
-                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                        <font key="font" usesAppearanceFont="YES"/>
-                                                    </buttonCell>
-                                                    <color key="bezelColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                                                </button>
-                                            </viewController>
-                                            <size key="designTimeSize" width="45" height="30"/>
-                                        </touchBarItem>
-                                        <touchBarItem id="KzY-oe-neJ">
-                                            <viewController key="viewController" id="UDT-Pn-8Uo">
-                                                <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lJc-o7-Tbr">
-                                                    <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
-                                                    <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" lineBreakMode="charWrapping" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="soa-pE-OGW">
-                                                        <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
-                                                        <font key="font" usesAppearanceFont="YES"/>
-                                                    </buttonCell>
-                                                    <color key="bezelColor" name="systemPurpleColor" catalog="System" colorSpace="catalog"/>
-                                                </button>
-                                            </viewController>
-                                            <size key="designTimeSize" width="45" height="30"/>
                                         </touchBarItem>
                                     </touchBarItems>
                                 </touchBar>
@@ -838,7 +780,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="106" height="720"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
-                                            <pdfThumbnailView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jGs-p4-mfV">
+                                            <pdfThumbnailView wantsLayer="YES" allowsDragging="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGs-p4-mfV">
                                                 <rect key="frame" x="0.0" y="0.0" width="106" height="720"/>
                                                 <size key="thumbnailSize" width="64" height="64"/>
                                             </pdfThumbnailView>
