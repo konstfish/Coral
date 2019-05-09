@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6308286F2284416E00663D98 /* Witness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6308286D2284408200663D98 /* Witness.framework */; };
 		63366A3F2263ADE9002FA4C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63366A3E2263ADE9002FA4C2 /* AppDelegate.swift */; };
 		63366A412263ADE9002FA4C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63366A402263ADE9002FA4C2 /* ViewController.swift */; };
 		63366A432263ADE9002FA4C2 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63366A422263ADE9002FA4C2 /* Document.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6308286D2284408200663D98 /* Witness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Witness.framework; path = Carthage/Build/Mac/Witness.framework; sourceTree = "<group>"; };
 		63366A3B2263ADE9002FA4C2 /* Coral.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coral.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63366A3E2263ADE9002FA4C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63366A402263ADE9002FA4C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,17 +32,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6308286F2284416E00663D98 /* Witness.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6308286C2284408200663D98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6308286D2284408200663D98 /* Witness.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		63366A322263ADE9002FA4C2 = {
 			isa = PBXGroup;
 			children = (
 				63366A3D2263ADE9002FA4C2 /* Coral */,
 				63366A3C2263ADE9002FA4C2 /* Products */,
+				6308286C2284408200663D98 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +88,7 @@
 				63366A372263ADE9002FA4C2 /* Sources */,
 				63366A382263ADE9002FA4C2 /* Frameworks */,
 				63366A392263ADE9002FA4C2 /* Resources */,
+				630828702284418900663D98 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -136,6 +149,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		630828702284418900663D98 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/Witness.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		63366A372263ADE9002FA4C2 /* Sources */ = {
@@ -284,6 +318,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5CBV2PEH36;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Coral/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +340,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5CBV2PEH36;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Coral/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -8,6 +8,7 @@
 
 import Cocoa
 import Quartz
+import Witness
 
 class ViewController: NSViewController {
 
@@ -17,6 +18,8 @@ class ViewController: NSViewController {
     @IBOutlet var thumb_view: NSView!
     
     var titlebar = true
+    var filename = ""
+    var witness: Witness?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +27,7 @@ class ViewController: NSViewController {
     }
     
     override func viewDidAppear() {
-        self.thumb_view.isHidden = true
+        //self.thumb_view.isHidden = true
         let document = self.view.window?.windowController?.document as! Document
         self.view.window?.title = document.displayName
         self.pdfview.document = document.pdfdoc
@@ -35,8 +38,18 @@ class ViewController: NSViewController {
         self.thumbs.pdfView = self.pdfview
         self.pdfview.scrollToBeginningOfDocument(nil) // to top lmao
         
-        let filename = document.fileURL!.absoluteString
+        self.filename = document.fileURL!.absoluteString.replacingOccurrences(of: "file://", with: "")
         print(filename)
+        
+        // file change listener
+        self.witness = Witness(paths: [filename], flags: .FileEvents, latency: 0.3) { events in
+            print("file modified")
+            // filters out update events
+            if(events.description.contains("flags: Item Inode Meta Modification,Item Modified,Item Xattr Modification,Item Is File)]")){
+                print("reloading PDF")
+                self.refreshPDF()
+            }
+        }
     }
 
     override var representedObject: Any? {
@@ -61,6 +74,11 @@ class ViewController: NSViewController {
         titlebar = !titlebar
     }
     
+    @IBAction func refreshPDFWindowItemSelected(_ sender: Any) {
+       refreshPDF()
+    }
+    
+    
     @IBAction func highlightTextWindowItemSelected(_ sender: Any) {
         highlightText(c: NSColor.red)
     }
@@ -69,13 +87,20 @@ class ViewController: NSViewController {
         highlightText(c: NSColor.purple)
     }
     
+    func refreshPDF() {
+        let pdfdocu = PDFDocument(url: URL(fileURLWithPath: self.filename))
+        if(pdfdocu != nil){ // crash if pdf is null
+            self.pdfview.document = pdfdocu!
+        }
+    }
+    
     func highlightText(c: NSColor) {
         let selections = pdfview.currentSelection?.selectionsByLine()
         guard let page = selections?.first?.pages.first else { return }
         
         selections?.forEach({ selection in
             let highlight = PDFAnnotation(bounds: selection.bounds(for: page), forType: .highlight, withProperties: nil)
-            print(highlight.isHighlighted)
+            //print(highlight.isHighlighted)
             highlight.endLineStyle = .square
             highlight.color = c.withAlphaComponent(0.5)
             page.addAnnotation(highlight)
@@ -83,4 +108,3 @@ class ViewController: NSViewController {
     }
     
 }
-
