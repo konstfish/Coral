@@ -724,34 +724,103 @@
                             <touchBarGroupItem id="YgL-bL-oxB">
                                 <touchBar key="groupTouchBar" id="nYY-i6-YOY">
                                     <touchBarItems>
-                                        <touchBarItem id="huS-nP-HgL">
-                                            <viewController key="viewController" id="n25-Gy-fZ0">
-                                                <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hmf-Za-utt">
-                                                    <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                                    <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="M1b-hB-F9d">
-                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                        <font key="font" usesAppearanceFont="YES"/>
-                                                    </buttonCell>
-                                                    <color key="bezelColor" name="systemPurpleColor" catalog="System" colorSpace="catalog"/>
-                                                    <connections>
-                                                        <action selector="highlightPurpleTouchbarItemSelected:" target="6f7-a7-6o1" id="DCP-Ip-2vd"/>
-                                                    </connections>
-                                                </button>
-                                            </viewController>
-                                            <size key="designTimeSize" width="72" height="30"/>
-                                        </touchBarItem>
-                                        <touchBarItem id="JTJ-16-J2z">
-                                            <viewController key="viewController" id="ZVW-Ge-sAz">
-                                                <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mDZ-kc-1dH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                                    <buttonCell key="cell" type="push" bezelStyle="rounded" image="buttonCell:w8O-2L-AKM:image" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="w8O-2L-AKM">
-                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                        <font key="font" usesAppearanceFont="YES"/>
-                                                    </buttonCell>
-                                                    <color key="bezelColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
-                                                </button>
-                                            </viewController>
-                                        </touchBarItem>
+                                        <touchBarGroupItem id="Kux-Uo-1nf">
+                                            <touchBar key="groupTouchBar" id="jmo-7a-lnJ">
+                                                <touchBarItems>
+                                                    <touchBarItem id="4hD-qc-2Qa">
+                                                        <viewController key="viewController" id="rJD-Yl-IWc">
+                                                            <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OWC-a6-nzX">
+                                                                <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                                                <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EYN-eY-VZ4">
+                                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                    <font key="font" usesAppearanceFont="YES"/>
+                                                                </buttonCell>
+                                                                <color key="bezelColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                                <connections>
+                                                                    <action selector="highlightRedTouchbarItemSelected:" target="6f7-a7-6o1" id="NlG-QW-Ao9"/>
+                                                                </connections>
+                                                            </button>
+                                                        </viewController>
+                                                    </touchBarItem>
+                                                    <touchBarItem id="1re-lw-p5d">
+                                                        <viewController key="viewController" id="nlu-ee-xfA">
+                                                            <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qj3-Zd-uio">
+                                                                <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                                                <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oFN-9r-fwe">
+                                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                    <font key="font" usesAppearanceFont="YES"/>
+                                                                </buttonCell>
+                                                                <color key="bezelColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                                                <connections>
+                                                                    <action selector="highlightOrangeTouchbarItemSelected:" target="6f7-a7-6o1" id="4fb-MM-41e"/>
+                                                                </connections>
+                                                            </button>
+                                                        </viewController>
+                                                    </touchBarItem>
+                                                    <touchBarItem id="JTJ-16-J2z">
+                                                        <viewController key="viewController" id="ZVW-Ge-sAz">
+                                                            <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mDZ-kc-1dH">
+                                                                <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                                                <buttonCell key="cell" type="push" bezelStyle="rounded" image="buttonCell:w8O-2L-AKM:image" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="w8O-2L-AKM">
+                                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                    <font key="font" usesAppearanceFont="YES"/>
+                                                                </buttonCell>
+                                                                <color key="bezelColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                                <connections>
+                                                                    <action selector="highlightYellowTouchbarItemSelected:" target="6f7-a7-6o1" id="I1A-bi-8sx"/>
+                                                                </connections>
+                                                            </button>
+                                                        </viewController>
+                                                    </touchBarItem>
+                                                    <touchBarItem id="gPc-b0-zWB">
+                                                        <viewController key="viewController" id="eHi-d5-8xZ">
+                                                            <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="B5L-IT-LBq">
+                                                                <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                                                <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5mN-Bz-lkG">
+                                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                    <font key="font" usesAppearanceFont="YES"/>
+                                                                </buttonCell>
+                                                                <color key="bezelColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                                                <connections>
+                                                                    <action selector="highlightGreenTouchbarItemSelected:" target="6f7-a7-6o1" id="6b9-rr-fR5"/>
+                                                                </connections>
+                                                            </button>
+                                                        </viewController>
+                                                    </touchBarItem>
+                                                    <touchBarItem id="hRg-Mx-cfz">
+                                                        <viewController key="viewController" id="wrc-5h-slw">
+                                                            <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3qo-Gn-o4c">
+                                                                <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                                                <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KtG-bg-qk6">
+                                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                    <font key="font" usesAppearanceFont="YES"/>
+                                                                </buttonCell>
+                                                                <color key="bezelColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                                                                <connections>
+                                                                    <action selector="highlightBlueTouchbarItemSelected:" target="6f7-a7-6o1" id="TWT-Rc-jcY"/>
+                                                                </connections>
+                                                            </button>
+                                                        </viewController>
+                                                    </touchBarItem>
+                                                    <touchBarItem id="huS-nP-HgL">
+                                                        <viewController key="viewController" id="n25-Gy-fZ0">
+                                                            <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hmf-Za-utt">
+                                                                <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                                                <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="M1b-hB-F9d">
+                                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                    <font key="font" usesAppearanceFont="YES"/>
+                                                                </buttonCell>
+                                                                <color key="bezelColor" name="systemPurpleColor" catalog="System" colorSpace="catalog"/>
+                                                                <connections>
+                                                                    <action selector="highlightPurpleTouchbarItemSelected:" target="6f7-a7-6o1" id="DCP-Ip-2vd"/>
+                                                                </connections>
+                                                            </button>
+                                                        </viewController>
+                                                        <size key="designTimeSize" width="72" height="30"/>
+                                                    </touchBarItem>
+                                                </touchBarItems>
+                                            </touchBar>
+                                        </touchBarGroupItem>
                                     </touchBarItems>
                                 </touchBar>
                             </touchBarGroupItem>
