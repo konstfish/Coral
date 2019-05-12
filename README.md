@@ -6,7 +6,9 @@
 </div>
 
 <div align="center">
-[![license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://img.shields.io/badge/license-MIT-brightgreen.svg)
+
+[![license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/konstfish/Coral/blob/master/LICENSE)
+
 </div>
 
 ## setup
