@@ -84,6 +84,26 @@ class ViewController: NSViewController {
         highlightText(c: NSColor.red)
     }
     
+    @IBAction func highlightRedTouchbarItemSelected(_ sender: Any) {
+        highlightText(c: NSColor.red)
+    }
+    
+    @IBAction func highlightOrangeTouchbarItemSelected(_ sender: Any) {
+        highlightText(c: NSColor.orange)
+    }
+    
+    @IBAction func highlightYellowTouchbarItemSelected(_ sender: Any) {
+        highlightText(c: NSColor.yellow)
+    }
+    
+    @IBAction func highlightGreenTouchbarItemSelected(_ sender: Any) {
+        highlightText(c: NSColor.green)
+    }
+    
+    @IBAction func highlightBlueTouchbarItemSelected(_ sender: Any) {
+        highlightText(c: NSColor.blue)
+    }
+    
     @IBAction func highlightPurpleTouchbarItemSelected(_ sender: Any) {
         highlightText(c: NSColor.purple)
     }

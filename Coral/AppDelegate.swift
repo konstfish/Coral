@@ -13,7 +13,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var testWindowMenuItem: NSMenuItem!
     let vc = ViewController ()
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
     }
 
     func applicationShouldOpenUntitledFile(_ sender: NSApplication) -> Bool {
