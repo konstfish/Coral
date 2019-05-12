@@ -38,10 +38,10 @@ class ViewController: NSViewController {
         self.thumbs.pdfView = self.pdfview
         self.pdfview.scrollToBeginningOfDocument(nil) // to top lmao
         
-        self.filename = document.fileURL!.absoluteString.replacingOccurrences(of: "file://", with: "")
+        self.filename = document.fileURL!.absoluteString.replacingOccurrences(of: "file://", with: "").replacingOccurrences(of: "%20", with: " ")
         print(filename)
-        
         // file change listener
+        print("starting file listener")
         self.witness = Witness(paths: [filename], flags: .FileEvents, latency: 0.2) { events in
             print("file modified")
             // filters out update events
