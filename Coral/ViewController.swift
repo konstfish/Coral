@@ -42,7 +42,7 @@ class ViewController: NSViewController {
         print(filename)
         
         // file change listener
-        self.witness = Witness(paths: [filename], flags: .FileEvents, latency: 0.3) { events in
+        self.witness = Witness(paths: [filename], flags: .FileEvents, latency: 0.2) { events in
             print("file modified")
             // filters out update events
             if(events.description.contains("flags: Item Inode Meta Modification,Item Modified,Item Xattr Modification,Item Is File)]")){
@@ -71,6 +71,7 @@ class ViewController: NSViewController {
         }else{
             self.view.window?.styleMask.insert(NSWindow.StyleMask.titled)
         }
+        self.refreshPDF()
         titlebar = !titlebar
     }
     
