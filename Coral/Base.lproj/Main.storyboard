@@ -823,8 +823,6 @@
                     </view>
                     <connections>
                         <outlet property="pdfview" destination="WDm-2T-E4w" id="WsB-e9-eQD"/>
-                        <outlet property="thePDFView" destination="WDm-2T-E4w" id="U8b-ZQ-Djn"/>
-                        <outlet property="theThumbnailView" destination="jGs-p4-mfV" id="0fU-Nh-WPU"/>
                         <outlet property="thumb_view" destination="QHE-Rh-Vix" id="nzH-UU-TTa"/>
                         <outlet property="thumbs" destination="jGs-p4-mfV" id="zrs-3P-3z5"/>
                     </connections>
