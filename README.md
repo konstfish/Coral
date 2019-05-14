@@ -13,7 +13,39 @@
 
 </div>
 
-## setup
+## Demo
+
+Example Workflow:
+
+![workflow](etc/screenshots/demo.gif)
+
+## Functionality
+
+ - Hot Reloading PDF Files on Change
+ - Highlight Text
+ - Hide/Show Titlebar
+ - Hide/Show PDF Thumbnails
+ - Clean Interface
+
+## TODO
+
+ - [ ] Add Apples Script Support
+ - [ ] Fix Black Bar from Split View
+ - [x] Highlight Text
+ - [ ] Save Highlighted Text
+ - [ ] Complete util script
+
+## Scripting Support
+
+TODO
+
+```applescript
+tell application "Coral"
+    open "file.pdf"
+end tell
+```
+
+## Setup
 
 1. run: `carthage update`
 
