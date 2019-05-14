@@ -1,0 +1,50 @@
+#!/usr/local/bin/python3
+# -*- coding: utf-8 -*-
+
+import os, sys
+
+version = "1.0.0"
+
+def print_help():
+    print("""
+usage: coral [--version] [--help] <path>
+
+Commands:
+    history         Shows the most recent changes that have been made to the PDF
+    flex            Prnits out the logo in ASCII
+    """)
+
+def print_flex():
+    print("""      _ _ _ _ _ _
+    /              \\
+   |   |/  | \\ \\/   |
+   |    \\| \\ \\|/    |
+   |     \\ | /      |
+   |      \\\\|       |
+   |       ||       |
+    \\ _ _ _ _ _ _  /
+    """)
+
+def print_version():
+    print_flex()
+    print("Coral 1.0.0 © David Fischer")
+
+def open_file(file):
+    try:
+        os.system("open " + file + " -a Coral.app")
+    except:
+        print("lmao")
+
+if(len(sys.argv) == 1):
+    print_help()
+
+elif(len(sys.argv) == 2):
+    if(str(sys.argv[1]) == "history"):
+        os.system("git status")
+    if(str(sys.argv[1]) == "flex"):
+        print_flex()
+    if(str(sys.argv[1]) == "version" or str(sys.argv[1]) == "--version" or str(sys.argv[1]) == "-v"):
+        print_version()
+
+    elif(str(sys.argv[1]).endswith(".pdf")):
+        open_file(str(sys.argv[1]))
