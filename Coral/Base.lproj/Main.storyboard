@@ -25,7 +25,11 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                            <connections>
+                                                <action selector="showPreferences:" target="Voe-Tx-rLC" id="3di-yx-miJ"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                                         <menuItem title="Services" id="NMo-om-nkz">
                                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -694,11 +698,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Coral" customModuleProvider="target">
-                    <connections>
-                        <outlet property="testWindowMenuItem" destination="nFX-JM-Wi4" id="136-BI-1JH"/>
-                    </connections>
-                </customObject>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Coral" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="cDy-wr-xHJ"/>
@@ -730,7 +730,8 @@
                                                     <touchBarItem id="4hD-qc-2Qa">
                                                         <viewController key="viewController" id="rJD-Yl-IWc">
                                                             <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OWC-a6-nzX">
-                                                                <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                                                <rect key="frame" x="0.0" y="-11" width="84" height="41"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EYN-eY-VZ4">
                                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                     <font key="font" usesAppearanceFont="YES"/>
@@ -745,7 +746,8 @@
                                                     <touchBarItem id="1re-lw-p5d">
                                                         <viewController key="viewController" id="nlu-ee-xfA">
                                                             <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qj3-Zd-uio">
-                                                                <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                                                <rect key="frame" x="0.0" y="-11" width="84" height="41"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oFN-9r-fwe">
                                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                     <font key="font" usesAppearanceFont="YES"/>
@@ -760,7 +762,8 @@
                                                     <touchBarItem id="JTJ-16-J2z">
                                                         <viewController key="viewController" id="ZVW-Ge-sAz">
                                                             <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mDZ-kc-1dH">
-                                                                <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                                                <rect key="frame" x="0.0" y="-11" width="84" height="41"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <buttonCell key="cell" type="push" bezelStyle="rounded" image="buttonCell:w8O-2L-AKM:image" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="w8O-2L-AKM">
                                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                     <font key="font" usesAppearanceFont="YES"/>
@@ -775,7 +778,8 @@
                                                     <touchBarItem id="gPc-b0-zWB">
                                                         <viewController key="viewController" id="eHi-d5-8xZ">
                                                             <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="B5L-IT-LBq">
-                                                                <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                                                <rect key="frame" x="0.0" y="-11" width="84" height="41"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5mN-Bz-lkG">
                                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                     <font key="font" usesAppearanceFont="YES"/>
@@ -790,7 +794,8 @@
                                                     <touchBarItem id="hRg-Mx-cfz">
                                                         <viewController key="viewController" id="wrc-5h-slw">
                                                             <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3qo-Gn-o4c">
-                                                                <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                                                <rect key="frame" x="0.0" y="-11" width="84" height="41"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KtG-bg-qk6">
                                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                     <font key="font" usesAppearanceFont="YES"/>
@@ -805,7 +810,8 @@
                                                     <touchBarItem id="huS-nP-HgL">
                                                         <viewController key="viewController" id="n25-Gy-fZ0">
                                                             <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hmf-Za-utt">
-                                                                <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                                                <rect key="frame" x="0.0" y="-11" width="84" height="41"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="M1b-hB-F9d">
                                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                     <font key="font" usesAppearanceFont="YES"/>
