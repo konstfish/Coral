@@ -10,8 +10,9 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-    @IBOutlet weak var testWindowMenuItem: NSMenuItem!
-    let vc = ViewController ()
+    
+    var preferencesController: NSWindowController?
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
     }
 
@@ -23,5 +24,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
     
+    @IBAction func showPreferences(_ sender: Any) {
+        if !(preferencesController != nil){
+            let storyboard = NSStoryboard(name: "Preferences", bundle: nil)
+            
+            preferencesController = storyboard.instantiateInitialController() as? NSWindowController
+            preferencesController!.showWindow(sender)
+        }else{
+            preferencesController!.showWindow(sender)
+        }
+    }
 }
 

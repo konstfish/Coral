@@ -13,6 +13,9 @@
 		63366A432263ADE9002FA4C2 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63366A422263ADE9002FA4C2 /* Document.swift */; };
 		63366A452263ADEA002FA4C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63366A442263ADEA002FA4C2 /* Assets.xcassets */; };
 		63366A482263ADEA002FA4C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63366A462263ADEA002FA4C2 /* Main.storyboard */; };
+		63954D1922900B0500BD0846 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63954D1822900B0500BD0846 /* Preferences.storyboard */; };
+		63954D1B22900C3300BD0846 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63954D1A22900C3300BD0846 /* PreferencesViewController.swift */; };
+		63954D1D22900D9C00BD0846 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63954D1C22900D9C00BD0846 /* PreferencesWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		63366A472263ADEA002FA4C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63366A492263ADEA002FA4C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63366A4A2263ADEA002FA4C2 /* Coral.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Coral.entitlements; sourceTree = "<group>"; };
+		63954D1822900B0500BD0846 /* Preferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
+		63954D1A22900C3300BD0846 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		63954D1C22900D9C00BD0846 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +56,7 @@
 		63366A322263ADE9002FA4C2 = {
 			isa = PBXGroup;
 			children = (
+				63954D1722900ADB00BD0846 /* CPreferences */,
 				63366A3D2263ADE9002FA4C2 /* Coral */,
 				63366A3C2263ADE9002FA4C2 /* Products */,
 				6308286C2284408200663D98 /* Frameworks */,
@@ -76,6 +83,16 @@
 				63366A4A2263ADEA002FA4C2 /* Coral.entitlements */,
 			);
 			path = Coral;
+			sourceTree = "<group>";
+		};
+		63954D1722900ADB00BD0846 /* CPreferences */ = {
+			isa = PBXGroup;
+			children = (
+				63954D1822900B0500BD0846 /* Preferences.storyboard */,
+				63954D1A22900C3300BD0846 /* PreferencesViewController.swift */,
+				63954D1C22900D9C00BD0846 /* PreferencesWindowController.swift */,
+			);
+			path = CPreferences;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +160,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63954D1922900B0500BD0846 /* Preferences.storyboard in Resources */,
 				63366A452263ADEA002FA4C2 /* Assets.xcassets in Resources */,
 				63366A482263ADEA002FA4C2 /* Main.storyboard in Resources */,
 			);
@@ -178,7 +196,9 @@
 			files = (
 				63366A412263ADE9002FA4C2 /* ViewController.swift in Sources */,
 				63366A3F2263ADE9002FA4C2 /* AppDelegate.swift in Sources */,
+				63954D1D22900D9C00BD0846 /* PreferencesWindowController.swift in Sources */,
 				63366A432263ADE9002FA4C2 /* Document.swift in Sources */,
+				63954D1B22900C3300BD0846 /* PreferencesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,7 +334,7 @@
 		63366A4E2263ADEA002FA4C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5CBV2PEH36;
@@ -336,7 +356,7 @@
 		63366A4F2263ADEA002FA4C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5CBV2PEH36;
