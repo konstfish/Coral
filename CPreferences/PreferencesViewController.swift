@@ -10,6 +10,9 @@ import Cocoa
 
 class PreferencesViewController: NSViewController {
 
+    
+    @IBOutlet weak var thumbImg: NSImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
