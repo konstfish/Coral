@@ -16,6 +16,7 @@ class ViewController: NSViewController {
     @IBOutlet var pdfview: PDFView!
     @IBOutlet var thumbs: PDFThumbnailView!
     @IBOutlet var thumb_view: NSView!
+    @IBOutlet var split_view: NSSplitView!
     
     var titlebar = true
     var filename = ""
@@ -43,9 +44,10 @@ class ViewController: NSViewController {
         // file change listener
         print("starting file listener")
         self.witness = Witness(paths: [filename], flags: .FileEvents, latency: 0.2) { events in
-            print("file modified")
+            print("change detected")
+            //print(events.description)
             // filters out update events
-            if(events.description.contains("flags: Item Inode Meta Modification,Item Modified,Item Xattr Modification,Item Is File)]")){
+            if(events.description.contains("Item Xattr Modification")){
                 print("reloading PDF")
                 self.refreshPDF()
             }
@@ -57,9 +59,10 @@ class ViewController: NSViewController {
         }
     }
 
-    @IBAction func testWindowMenuItemSelected(_ sender: Any) {
+    @IBAction func hidePreviewsWindowMenuItemSelected(_ sender: Any) {
         if self.thumb_view.isHidden == false {
             self.thumb_view.isHidden = true
+            
         }else{
             self.thumb_view.isHidden = false
         }

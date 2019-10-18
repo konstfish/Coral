@@ -618,7 +618,7 @@
                                     <items>
                                         <menuItem title="Hide Previews" keyEquivalent="H" id="nFX-JM-Wi4">
                                             <connections>
-                                                <action selector="testWindowMenuItemSelected:" target="Ady-hI-5gd" id="D3q-aF-lI2"/>
+                                                <action selector="hidePreviewsWindowMenuItemSelected:" target="Ady-hI-5gd" id="x6f-Dm-QcH"/>
                                                 <binding destination="cDy-wr-xHJ" name="value" keyPath="values.representedObject" id="4ed-Xb-0Gh"/>
                                             </connections>
                                         </menuItem>
@@ -898,6 +898,7 @@
                     </view>
                     <connections>
                         <outlet property="pdfview" destination="WDm-2T-E4w" id="WsB-e9-eQD"/>
+                        <outlet property="split_view" destination="cp1-3R-o4q" id="h2z-xB-XKL"/>
                         <outlet property="thumb_view" destination="QHE-Rh-Vix" id="nzH-UU-TTa"/>
                         <outlet property="thumbs" destination="jGs-p4-mfV" id="zrs-3P-3z5"/>
                     </connections>
