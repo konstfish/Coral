@@ -34,7 +34,7 @@ class ViewController: NSViewController {
         self.pdfview.document = document.pdfdoc
         self.pdfview.autoScales = true
         self.pdfview.acceptsDraggedFiles = true
-        //self.pdfview.backgroundColor = .init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+        self.pdfview.backgroundColor = .init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.1)
         self.pdfview.pageShadowsEnabled = true
         self.thumbs.pdfView = self.pdfview
         self.pdfview.scrollToBeginningOfDocument(nil) // to top lmao
