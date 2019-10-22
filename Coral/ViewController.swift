@@ -34,11 +34,11 @@ class ViewController: NSViewController {
         self.pdfview.document = document.pdfdoc
         self.pdfview.autoScales = true
         self.pdfview.acceptsDraggedFiles = true
-        self.pdfview.backgroundColor = .init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+        //self.pdfview.backgroundColor = .init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
         self.pdfview.pageShadowsEnabled = true
         self.thumbs.pdfView = self.pdfview
         self.pdfview.scrollToBeginningOfDocument(nil) // to top lmao
-        
+
         self.filename = document.fileURL!.absoluteString.replacingOccurrences(of: "file://", with: "").replacingOccurrences(of: "%20", with: " ")
         print(filename)
         // file change listener
@@ -79,7 +79,7 @@ class ViewController: NSViewController {
     }
     
     @IBAction func refreshPDFWindowItemSelected(_ sender: Any) {
-       refreshPDF()
+        self.refreshPDF()
     }
     
     
@@ -113,8 +113,19 @@ class ViewController: NSViewController {
     
     func refreshPDF() {
         let pdfdocu = PDFDocument(url: URL(fileURLWithPath: self.filename))
+        let p = self.pdfview.document?.index(for: self.pdfview.currentPage!)
+        // very clean code btw
         if(pdfdocu != nil){ // crash if pdf is null
             self.pdfview.document = pdfdocu!
+            self.pdfview.scrollToBeginningOfDocument(self)
+            // wont work since its too easy :)
+            //let pa = self.pdfview.document?.page(at: p!)
+            //self.pdfview.go(to: pa!)
+            var i = 0
+            while (i < p!){
+                self.pdfview.goToNextPage(self)
+                i = i + 1
+            }
         }
     }
     
