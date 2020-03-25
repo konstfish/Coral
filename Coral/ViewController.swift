@@ -45,9 +45,9 @@ class ViewController: NSViewController {
         print("starting file listener")
         self.witness = Witness(paths: [filename], flags: .FileEvents, latency: 0.2) { events in
             print("change detected")
-            //print(events.description)
+            print(events.description)
             // filters out update events
-            if(events.description.contains("Item Xattr Modification")){
+            if(events.description.contains("Item Modified")){
                 print("reloading PDF")
                 self.refreshPDF()
             }
