@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1100"
+   LastUpgradeVersion = "1220"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "63366A3A2263ADE9002FA4C2"
-               BuildableName = "Coral.app"
+               BlueprintIdentifier = "Coral::Coral"
+               BuildableName = "Coral.framework"
                BlueprintName = "Coral"
                ReferencedContainer = "container:Coral.xcodeproj">
             </BuildableReference>
@@ -30,8 +30,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "63366A3A2263ADE9002FA4C2"
-            BuildableName = "Coral.app"
+            BlueprintIdentifier = "Coral::Coral"
+            BuildableName = "Coral.framework"
             BlueprintName = "Coral"
             ReferencedContainer = "container:Coral.xcodeproj">
          </BuildableReference>
@@ -53,8 +53,8 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "63366A3A2263ADE9002FA4C2"
-            BuildableName = "Coral.app"
+            BlueprintIdentifier = "Coral::Coral"
+            BuildableName = "Coral.framework"
             BlueprintName = "Coral"
             ReferencedContainer = "container:Coral.xcodeproj">
          </BuildableReference>
@@ -70,8 +70,8 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "63366A3A2263ADE9002FA4C2"
-            BuildableName = "Coral.app"
+            BlueprintIdentifier = "Coral::Coral"
+            BuildableName = "Coral.framework"
             BlueprintName = "Coral"
             ReferencedContainer = "container:Coral.xcodeproj">
          </BuildableReference>
